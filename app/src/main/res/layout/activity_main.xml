@@ -23,8 +23,8 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="404dp"
-        android:layout_height="wrap_content"
+        android:layout_width="401dp"
+        android:layout_height="303dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="17dp"
@@ -40,8 +40,8 @@
 
             <TextView
                 android:id="@+id/head1"
-                android:layout_width="252dp"
-                android:layout_height="wrap_content"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
                 android:text="Введите дату вашего рождения" />
 
             <TextView
@@ -57,8 +57,8 @@
 
             <EditText
                 android:id="@+id/editTextDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
                 android:ems="10"
                 android:hint="day.month.year"
                 android:importantForAutofill="no"
@@ -81,11 +81,16 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/line1"
-                android:layout_width="304dp"
-                android:layout_height="match_parent"
-                tools:text="1. Необходимо лечь и лежать 5 минут почти без движений;" />
+                android:id="@+id/textView2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="1. Необходимо лечь и лежать 5 минут почти без движений;"
+                android:textSize="12sp" />
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
         <TableRow
             android:layout_width="match_parent"
@@ -93,9 +98,10 @@
 
             <TextView
                 android:id="@+id/line2"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:text="2. Посчитать пульс в течение минуты;" />
+                android:text="2. Посчитать пульс в течение минуты;"
+                android:textSize="12sp" />
         </TableRow>
 
         <TableRow
@@ -106,7 +112,8 @@
                 android:id="@+id/line3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="3. Введите пульс в положении лежа:" />
+                android:text="3. Введите пульс в положении лежа:"
+                android:textSize="12sp" />
 
             <EditText
                 android:id="@+id/pulse1"
@@ -114,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
+                android:text="60"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </TableRow>
 
@@ -123,9 +131,10 @@
 
             <TextView
                 android:id="@+id/line4"
-                android:layout_width="303dp"
-                android:layout_height="wrap_content"
-                android:text="4. Встать и стоять почти без движений 5 минуты;" />
+                android:layout_width="300dp"
+                android:layout_height="36dp"
+                android:text="4. Встать и стоять почти без движений 5 минут;"
+                android:textSize="12sp" />
         </TableRow>
 
         <TableRow
@@ -136,7 +145,8 @@
                 android:id="@+id/line5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5. Посчитать пульс в течение минуты;" />
+                android:text="5. Посчитать пульс в течение минуты;"
+                android:textSize="12sp" />
         </TableRow>
 
         <TableRow
@@ -147,15 +157,17 @@
                 android:id="@+id/line6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="6. Введите пульс в положении стоя:" />
+                android:text="6. Введите пульс в положении стоя:"
+                android:textSize="12sp" />
 
             <EditText
                 android:id="@+id/pulse2"
-                android:layout_width="24px"
+                android:layout_width="24dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="number"
+                android:text="65"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </TableRow>
 
@@ -167,7 +179,8 @@
                 android:id="@+id/line7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text='Нажмите "Ввод" для завершения теста.' />
+                android:text='Нажмите "Ввод" для завершения теста.'
+                android:textSize="12sp" />
         </TableRow>
 
     </TableLayout>

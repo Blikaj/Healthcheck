@@ -36,43 +36,183 @@
         app:srcCompat="@android:drawable/ic_dialog_alert" />
 
     <TableLayout
-        android:layout_width="386dp"
-        android:layout_height="134dp"
+        android:id="@+id/tableLayout"
+        android:layout_width="404dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="17dp"
-        android:layout_marginBottom="437dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Spinner
-                android:id="@+id/spinner3"
+            <TextView
+                android:id="@+id/head1"
+                android:layout_width="252dp"
+                android:layout_height="wrap_content"
+                android:text="Введите дату вашего рождения" />
+
+            <TextView
+                android:id="@+id/head2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                tools:ignore="MissingConstraints" />
+                android:text="Пол" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="day.month.year"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:textColor="#B3B3B3"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <Spinner
-                android:id="@+id/spinner2"
+                android:id="@+id/spinner1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:entries="@array/Пол"
                 android:minHeight="48dp"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-            <Spinner
-                android:id="@+id/spinner"
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="304dp"
+                android:layout_height="match_parent"
+                tools:text="1. Необходимо лечь и лежать 5 минут почти без движений;" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="2. Посчитать пульс в течение минуты;" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="3. Введите пульс в положении лежа:" />
+
+            <EditText
+                android:id="@+id/pulse1"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/line4"
+                android:layout_width="303dp"
+                android:layout_height="wrap_content"
+                android:text="4. Встать и стоять почти без движений 5 минуты;" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/line5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                tools:ignore="MissingConstraints" />
+                android:text="5. Посчитать пульс в течение минуты;" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/line6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6. Введите пульс в положении стоя:" />
+
+            <EditText
+                android:id="@+id/pulse2"
+                android:layout_width="24px"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/line7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='Нажмите "Ввод" для завершения теста.' />
         </TableRow>
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="299dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="42dp"
+        android:text="@string/descript"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/buttonfow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="284dp"
+        android:layout_marginBottom="157dp"
+        android:text="Вперёд"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

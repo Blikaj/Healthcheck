@@ -2,4 +2,9 @@
     <string name="app_name">Healthcheck</string>
     <string name="mainlabel">Переутомление</string>
     <string name="banner">Привлечение внимания</string>
+    <string-array name="Пол">
+        <item>М</item>
+        <item>Ж</item>
+    </string-array>
+    <string name="descript">Внимание, прохождение данного теста необходимо иметь возможность лечь на 5 минут. Время проведения теста около 10-15 минут.</string>
 </resources>

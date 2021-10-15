@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -17,33 +18,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText pulse1;
     EditText pulse2;
     Spinner spinner1;
-    public int p1;
-    public int p2;
     public int razn;
-    ImageView imageicon;
+    ImageView warnimage;
+    TextView warntext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button buttonfow = (Button)findViewById(R.id.buttonfow);
         buttonfow.setOnClickListener(this);
-
+        warnimage = (ImageView) findViewById(R.id.warnimage);
+        pulse1 = (EditText) findViewById(R.id.pulse1);
+        pulse2 = (EditText) findViewById(R.id.pulse2);
+        warntext = (TextView) findViewById(R.id.warntext);
     }
 
     @Override
     public void onClick(View view) {
-        /*p1 = Integer.parseInt(pulse1.getText().toString());
-        p2 = Integer.parseInt(pulse2.getText().toString());
+        int p1 = Integer.parseInt(pulse1.getText().toString());
+        int p2 = Integer.parseInt(pulse2.getText().toString());
         razn = p2-p1;
+        String s = "empty";
         if ( razn <= 10) {
-            imageicon.setBackgroundColor(Color.argb(100, 0, 255, 0));
+            s = "Всё хорошо";
+            warnimage.setVisibility(View.VISIBLE);
+            warntext.setVisibility(View.VISIBLE);
+            warnimage.setBackgroundColor(Color.argb(100, 0, 255, 0));
+            warntext.setText(s.toCharArray(), 0, s.length());
         }
         else{
-            imageicon.setBackgroundColor(Color.argb(100, 255, 0, 0));
-        }*/
-        //imageicon.setBackgroundColor(Color.argb(100, 255, 0, 0));
-        Intent i;
-        i = new Intent(this, SecondpageActivity.class);
-        startActivity(i);
+            s = "Вы переутомлены";
+            warnimage.setVisibility(View.VISIBLE);
+            warntext.setVisibility(View.VISIBLE);
+            warnimage.setBackgroundColor(Color.argb(100, 255, 0, 0));
+            warntext.setText(s.toCharArray(), 0, s.length());
+        }
     }
 }

@@ -7,33 +7,19 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="189dp"
-        android:layout_height="33dp"
-        android:text="@string/mainlabel"
-        android:textColor="#E10707"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.148"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="58dp"
-        android:layout_height="58dp"
-        android:background="#E31010"
-        android:clickable="false"
-        android:contentDescription="@string/banner"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/textView3"
+        android:layout_width="299dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="42dp"
+        android:text="@string/descript"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.032"
-        app:srcCompat="@android:drawable/ic_dialog_alert" />
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -168,9 +154,9 @@
                 android:layout_width="24px"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:importantForAutofill="no"
                 android:inputType="number"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-                android:importantForAutofill="no" />
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </TableRow>
 
         <TableRow
@@ -187,32 +173,74 @@
     </TableLayout>
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="299dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="42dp"
-        android:text="@string/descript"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        android:id="@+id/textView"
+        android:layout_width="189dp"
+        android:layout_height="33dp"
+        android:text="@string/mainlabel"
+        android:textColor="#E10707"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:background="#E31010"
+        android:clickable="false"
+        android:contentDescription="@string/banner"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.032"
+        app:srcCompat="@android:drawable/ic_dialog_alert" />
 
     <Button
         android:id="@+id/buttonfow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="78dp"
-        android:layout_marginEnd="284dp"
-        android:layout_marginBottom="157dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="197dp"
         android:text="Вперёд"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/warnimage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <ImageView
+        android:id="@+id/warnimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="137dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonfow"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/warntext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="575dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="137dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/warnimage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

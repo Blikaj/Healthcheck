@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Healthcheck</string>
+    <string name="mainlabel">Переутомление</string>
+    <string name="banner">Привлечение внимания</string>
+</resources>

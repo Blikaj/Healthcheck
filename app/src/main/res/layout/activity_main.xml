@@ -233,14 +233,46 @@
         android:id="@+id/warntext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="575dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="137dp"
+        android:layout_marginBottom="150dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/warnimage"
+        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/Normal"
+        android:layout_width="356dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="97dp"
+        android:text="Введённые показатели соответстуют отсутствию переутомления"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonfow" />
+
+    <TextView
+        android:id="@+id/Unnormal"
+        android:layout_width="356dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="97dp"
+        android:text="Введённые показатели соответстуют наличию переутомления"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonfow" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
